@@ -21,7 +21,25 @@ namespace LemonadeStand
             this.sugarAvailable = 0;
         }
 
+        public void SetLemonInventory()
+        {
 
+        }
+
+        public void SetSugarInventory()
+        {
+
+        }
+
+        public void SetIceInventory()
+        {
+
+        }
+
+        public void SetCupInventory()
+        {
+
+        }
 
         public double getLemonInventory()
         {
@@ -48,7 +66,7 @@ namespace LemonadeStand
         {
 
             Console.WriteLine("You have {0} lemons, {1} cups of sugar, {2} cubes of ice," +
-                " and {3} cups left.", lemonsAvailable, iceAvailable, cupsAvailable, sugarAvailable);
+                " and {3} cups left.", lemonsAvailable, sugarAvailable, iceAvailable, cupsAvailable);
 
         }
     }

@@ -46,7 +46,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerList.cs" />
     <Compile Include="Day.cs" />
-    <Compile Include="Endings.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Player.cs" />

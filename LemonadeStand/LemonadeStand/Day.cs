@@ -11,7 +11,6 @@ namespace LemonadeStand
     {
         public Customer customer = new Customer();
         public CustomerList ListOfCustomers = new CustomerList();
-        public Endings ending = new Endings();
         public Weather weather = new Weather();
         public int startDay = 1;
         public int days = 7;
@@ -20,4 +19,5 @@ namespace LemonadeStand
         Random randomGen = new Random();
 
     }
+
 }

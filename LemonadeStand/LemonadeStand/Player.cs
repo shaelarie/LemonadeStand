@@ -26,7 +26,8 @@ public class Player
 
     public void addInventory(Inventory inventory)
     {
-            Recipe recipe = new Recipe();
+        Recipe recipe = new Recipe();
+        recipe.CanMakePitcher(inventory);
         Console.WriteLine("How many lemons would you like to buy? $.05 each");
         playerBuys = Convert.ToInt16(Console.ReadLine());
             if (startingBank < playerBuys * .05)
@@ -35,14 +36,19 @@ public class Player
                 startingBank = 20;
                 addInventory(inventory);
             }
+            else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
+            {
+                while (recipe.CanMakePitcher(inventory) == false)
+                {
+                    Console.WriteLine("You need at least 10 lemons to make a pitcher");
+                    inventory.getTotalInventory();
+                    addInventory(inventory);
+                }
+            }
             else if (playerBuys == 0)
             {
                 inventory.getTotalInventory();
                                 
-            }
-            else if (playerBuys == 0 && recipe.pitcher == 0)
-            {
-                inventory.getTotalInventory();
             }
             else
             {
@@ -50,13 +56,24 @@ public class Player
                 inventory.lemonsAvailable += playerBuys;
                 Console.WriteLine("you have ${0} left", startingBank);
             }
-        Console.WriteLine("How many bags of ice would you like to buy? $1 each");
+            recipe.CanMakePitcher(inventory);
+
+            Console.WriteLine("How many bags of ice would you like to buy? $1 each");
         playerBuys = Convert.ToInt16(Console.ReadLine());
             if (startingBank < playerBuys * 1.00)
             {
                 Console.WriteLine("You dont have enough in the bank. Start over.");
                 startingBank = 20;
                 addInventory(inventory);
+            }
+            else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
+            {
+                while (recipe.CanMakePitcher(inventory) == false)
+                {
+                    Console.WriteLine("You need at least 1 bag of ice to make a pitcher");
+                    inventory.getTotalInventory();
+                    addInventory(inventory);
+                }
             }
             else if (playerBuys == 0)
             {
@@ -68,13 +85,24 @@ public class Player
                 startingBank -= playerBuys * 1.00;
                 Console.WriteLine("you have ${0} left", startingBank);
             }
-        Console.WriteLine("How many sleeves of cups would you like to buy? 1.50 each");
+            recipe.CanMakePitcher(inventory);
+
+            Console.WriteLine("How many sleeves of cups would you like to buy? 1.50 each");
         playerBuys = Convert.ToInt16(Console.ReadLine());
             if (startingBank < playerBuys * 1.50)
             {
                 Console.WriteLine("You dont have enough in the bank. Start over.");
                 startingBank = 20;
                 addInventory(inventory); 
+            }
+            else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
+            {
+                while (recipe.CanMakePitcher(inventory) == false)
+                {
+                    Console.WriteLine("You need at least 1 sleeve of cups to make a pitcher");
+                    inventory.getTotalInventory();
+                    addInventory(inventory);
+                }
             }
             else if (playerBuys == 0)
             {
@@ -86,13 +114,24 @@ public class Player
                 startingBank -= playerBuys * 1.50;
                 Console.WriteLine("you have ${0} left", startingBank);
             }
-        Console.WriteLine("How many bags of sugar would you like to buy? $1 each");
+            recipe.CanMakePitcher(inventory);
+
+            Console.WriteLine("How many bags of sugar would you like to buy? $1 each");
         playerBuys = Convert.ToInt16(Console.ReadLine());
             if (startingBank < playerBuys * 1.00)
             {
                 Console.WriteLine("You dont have enough in the bank. Start over.");
                 startingBank = 20;
                 addInventory(inventory);
+            }
+            else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
+            {
+                while (recipe.CanMakePitcher(inventory) == false)
+                {
+                    Console.WriteLine("You need at least 1 bag of sugar to make a pitcher");
+                    inventory.getTotalInventory();
+                    addInventory(inventory);
+                }
             }
             else if (playerBuys == 0)
             {
@@ -107,6 +146,8 @@ public class Player
             
             
     }
+
+        
 
 
     public double userProfit()

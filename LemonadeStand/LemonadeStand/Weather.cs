@@ -13,28 +13,15 @@ namespace LemonadeStand
         public int actualTemerature;
         string forecast;
         int highTemperature;
-       public int days;
-        Game game;
-        Player player;
-        string user;
+        public int days;
         public int startDay = 1;
         public int maxNumberOfCustomers;
-        Endings ending;
-        Recipe recipe;
-        
-
-
-
         public Weather()
         {
-
             
-                
                 this.highTemperature = (dailyWeather.Next(37, 95));
                 this.forecast = forecastOptions[(dailyWeather.Next(0, forecastOptions.Count))];
-            
-            
-                
+               
         }
 
         
@@ -46,7 +33,7 @@ namespace LemonadeStand
                 this.forecast = forecastOptions[(dailyWeather.Next(0, forecastOptions.Count))];
                 Console.WriteLine("The weather will be {1} with a high of {0} degrees", highTemperature, forecast);
                                 
-            }
+         }
 
         public void actualWeatherOfTheDay()
         {
@@ -72,7 +59,6 @@ namespace LemonadeStand
             }
             Console.WriteLine("Today is {0} degrees and {1} ", actualTemerature, forecast);
             
-            
         }
 
         public double GetActualTempature()
@@ -83,10 +69,7 @@ namespace LemonadeStand
         {
             return maxNumberOfCustomers;
         }
-            
-
-
-            
+     
 
         }
     }

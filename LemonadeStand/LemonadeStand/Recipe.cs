@@ -11,14 +11,11 @@ public class Recipe
     public int pitcher;
     public int cupsInPitcher;
     public bool canMakePitcher;
-    Endings ending;
-   
-
+    
     public Recipe()
         {
             this.pitcher = 0;
             this.cupsInPitcher = 15;
-            this.ending = new Endings();
         }
 
 

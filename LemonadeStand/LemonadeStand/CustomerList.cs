@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace LemonadeStand
 {
@@ -11,7 +11,7 @@ namespace LemonadeStand
         Day day;
         public int startDay = 1;
         public int days = 7;
-        public void listOfCustomers(Weather weather, Player player, Recipe recipe, Customer customer, Endings ending, Inventory inventory)
+        public void listOfCustomers(Weather weather, Player player, Recipe recipe, Customer customer, Inventory inventory)
         {
             for (int i = 0; i < weather.maxNumberOfCustomers; i++)
             {
@@ -58,10 +58,6 @@ namespace LemonadeStand
                 }
             }
 
-            if (startDay == days)
-            {
-                ending.done();
-            }
             startDay++;
             if (startDay % 1 == 0)
             {
