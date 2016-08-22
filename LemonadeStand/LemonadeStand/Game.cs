@@ -36,40 +36,34 @@ namespace LemonadeStand
                     Console.WriteLine("    ");
                     day.weather.WeatherForecastOfTheDay();
                     Console.WriteLine("  ");
-                    if (player.startingBank == 0)
+                    if (player.startingBank <= 0)
                     {
                         lost.Bankrupt();
                         i += 8;
                         break;
                     }
                     player.SetLemonInventory(inventory, recipe);
-                    if (player.startingBank == 0)
+                    if (player.startingBank <= 0)
                     {
                         lost.Bankrupt();
                         i += 8;
                         break;
                     }
                     player.SetSugarInventory(inventory, recipe);
-                    if (player.startingBank == 0)
+                    if (player.startingBank <= 0)
                     {
                         lost.Bankrupt();
                         i += 8;
                         break;
                     }
                     player.SetIceInventory(inventory, recipe);
-                    if (player.startingBank == 0)
+                    if (player.startingBank <= 0)
                     {
                         lost.Bankrupt();
                         i += 8;
                         break;
                     }
                     player.SetCupInventory(inventory, recipe);
-                    if (player.startingBank == 0)
-                    {
-                        lost.Bankrupt();
-                        i += 8;
-                        break;
-                    }
                     day.recipe.MakePitchers(inventory);
                     inventory.getTotalInventory();
                     player.chargePerCup();

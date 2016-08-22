@@ -47,7 +47,7 @@ public class Player
             }
             else
             {
-                startingBank -= playerBuys * .05;
+                startingBank -= (playerBuys * .05);
                 inventory.lemonsAvailable += playerBuys;
                 Console.WriteLine("you have ${0:0.00}", startingBank);
             }
@@ -60,7 +60,7 @@ public class Player
 
             Console.WriteLine("How many bags of sugar would you like to buy? $1 each");
             playerBuys = Convert.ToInt16(Console.ReadLine());
-            if (startingBank < playerBuys * 1.00 && startingBank >= 1)
+            if (startingBank < playerBuys * 1.00 && startingBank > 1)
             {
                 Console.WriteLine("You dont have enough in the bank.");
                 Console.WriteLine("You have ${0:0.00}", startingBank);
@@ -84,7 +84,7 @@ public class Player
             else
             {
                 inventory.sugarAvailable += playerBuys;
-                startingBank -= playerBuys * 1.00;
+                startingBank -= (playerBuys * 1.00);
                 Console.WriteLine("you have ${0:0.00} left", startingBank);
             }
         }
@@ -95,7 +95,7 @@ public class Player
 
             Console.WriteLine("How many bags of ice would you like to buy? $1 each");
             playerBuys = Convert.ToInt16(Console.ReadLine());
-            if (startingBank < playerBuys * 1.00 && startingBank >= 1)
+            if (startingBank < playerBuys * 1.00 && startingBank > 1)
             {
                 Console.WriteLine("You dont have enough in the bank.");
                 Console.WriteLine("You have ${0:0.00}", startingBank);
@@ -119,7 +119,7 @@ public class Player
             else
             {
                 inventory.iceAvailable += playerBuys;
-                startingBank -= playerBuys * 1.00;
+                startingBank -= (playerBuys * 1.00);
                 Console.WriteLine("you have ${0:0.00}", startingBank);
             }
         }
@@ -129,8 +129,8 @@ public class Player
             recipe.CanMakePitcher(inventory);
 
             Console.WriteLine("How many sleeves of cups would you like to buy? 1.50 each");
-            Convert.ToDouble(Console.ReadLine()); 
-            if (startingBank < playerBuys * 1.50 && startingBank >= 1.5)
+            playerBuys = Convert.ToInt16(Console.ReadLine());
+            if (startingBank < playerBuys * 1.50 && startingBank > 1.5)
             {
                 Console.WriteLine("You dont have enough in the bank.");
                 Console.WriteLine("You have ${0:0.00}", startingBank);
@@ -154,7 +154,7 @@ public class Player
             else
             {
                 inventory.cupsAvailable += playerBuys;
-                startingBank -= playerBuys * 1.50;
+                startingBank -= (playerBuys * 1.50);
                 Console.WriteLine("you have ${0:0.00}", startingBank);
             }
         }
