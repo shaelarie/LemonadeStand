@@ -18,21 +18,26 @@ namespace LemonadeStand
                 Customer MakeCustomers = new Customer();
                 List<Customer> customers = new List<Customer>() { MakeCustomers };
 
-
+                
                 foreach (Customer newCustomer in customers)
                 {
+                    customer.GetThirstLevel(weather);
+                    customer.GetWillingToPay();
                     recipe.pitcherStatus(inventory, customer, day);
+                    
 
-                    if (customer.thirstLevel > 5)
+                    if (customer.priceWillingToPay >= player.charge)
                     {
                         customer.customerBuys = true;
                     }
-                    else if (customer.thirstLevel <= 5)
+                    else if (customer.priceWillingToPay < player.charge)
                     {
                         customer.customerBuys = false;
                     }
+                    
+                    
+                    
 
-                 customer.GetThirstLevel(weather);
 
                     if (recipe.pitcher == 0)
                     {

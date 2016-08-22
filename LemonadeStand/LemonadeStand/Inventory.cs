@@ -8,10 +8,10 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        public int lemonsAvailable;
-        public int iceAvailable;
-        public int sugarAvailable;
-        public int cupsAvailable;
+        public double lemonsAvailable;
+        public double iceAvailable;
+        public double sugarAvailable;
+        public double cupsAvailable;
 
         public Inventory()
         {
@@ -21,38 +21,18 @@ namespace LemonadeStand
             this.sugarAvailable = 0;
         }
 
-        public void SetLemonInventory()
-        {
-
-        }
-
-        public void SetSugarInventory()
-        {
-
-        }
-
-        public void SetIceInventory()
-        {
-
-        }
-
-        public void SetCupInventory()
-        {
-
-        }
-
-        public double getLemonInventory()
+       public double getLemonInventory()
         {
             return this.lemonsAvailable;
 
         }
 
-        public int getIceInventory()
+        public double getIceInventory()
         {
             return this.iceAvailable;
         }
 
-        public int getCupInventory()
+        public double getCupInventory()
         {
             return this.cupsAvailable;
         }
@@ -65,8 +45,8 @@ namespace LemonadeStand
         public void getTotalInventory()
         {
 
-            Console.WriteLine("You have {0} lemons, {1} cups of sugar, {2} cubes of ice," +
-                " and {3} cups left.", lemonsAvailable, sugarAvailable, iceAvailable, cupsAvailable);
+            Console.WriteLine("You have {0} lemons, {1} bags of sugar, {2} bags of ice," +
+                " and {3} cups.", lemonsAvailable, sugarAvailable, iceAvailable, cupsAvailable);
 
         }
     }

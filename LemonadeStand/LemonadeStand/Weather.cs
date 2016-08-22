@@ -9,7 +9,7 @@ namespace LemonadeStand
     public class Weather
     {
         public Random dailyWeather = new Random();
-        List<string> forecastOptions = new List<string>() { "Rainy", "Sunny", "Cloudy" };
+        List<string> forecastOptions = new List<string>() {"Sunny", "Cloudy" };
         public int actualTemerature;
         string forecast;
         int highTemperature;
