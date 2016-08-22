@@ -32,7 +32,7 @@ namespace LemonadeStand
                     Console.WriteLine("Welcome to day {0}!", dayCount++);
                     Console.WriteLine("    ");
                     inventory.getTotalInventory();
-                    Console.WriteLine("You have {0:0.00}", player.startingBank);
+                    Console.WriteLine("You have ${0:0.00}", player.startingBank);
                     Console.WriteLine("    ");
                     day.weather.WeatherForecastOfTheDay();
                     Console.WriteLine("  ");

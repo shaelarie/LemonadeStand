@@ -25,7 +25,7 @@ public class Player
             if (startingBank < playerBuys * .05 && startingBank >= .05)
             {
                 Console.WriteLine("You dont have enough in the bank.");
-                Console.WriteLine("You have {0:0.00}", startingBank);
+                Console.WriteLine("You have ${0:0.00}", startingBank);
                 SetLemonInventory(inventory, recipe);
             }
             else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
@@ -63,7 +63,7 @@ public class Player
             if (startingBank < playerBuys * 1.00 && startingBank >= 1)
             {
                 Console.WriteLine("You dont have enough in the bank.");
-                Console.WriteLine("You have {0:0.00}", startingBank);
+                Console.WriteLine("You have ${0:0.00}", startingBank);
                 SetSugarInventory(inventory, recipe);
             }
             else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
@@ -98,7 +98,7 @@ public class Player
             if (startingBank < playerBuys * 1.00 && startingBank >= 1)
             {
                 Console.WriteLine("You dont have enough in the bank.");
-                Console.WriteLine("You have {0:0.00}", startingBank);
+                Console.WriteLine("You have ${0:0.00}", startingBank);
                 SetIceInventory(inventory, recipe);
             }
             else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
@@ -133,7 +133,7 @@ public class Player
             if (startingBank < playerBuys * 1.50 && startingBank >= 1.5)
             {
                 Console.WriteLine("You dont have enough in the bank.");
-                Console.WriteLine("You have {0:0.00}", startingBank);
+                Console.WriteLine("You have ${0:0.00}", startingBank);
                 SetCupInventory(inventory, recipe);
             }
             else if (playerBuys == 0 && recipe.CanMakePitcher(inventory) == false)
